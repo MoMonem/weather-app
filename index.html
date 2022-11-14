@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/21809a0f78.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App: know the weather before hand.</title>
+  </head>
+  <body>
+    <!-- body section -->
+    <main>
+      <div class="container">
+        <div class="search_section">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+          />
+          <button type="submit" class="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="weather_display_section">
+          <h2 class="city">Weather in <span class="cityName"></span></h2>
+          <h2 class="temp">26 °C</h2>
+          <ul class="temp-description">
+            <li class="temp_short_desc">Cloudy</li>
+            <li class="humidity">Humidity: 26 %</li>
+            <li class="wind_speed">Wind Speed: 26 km/h</li>
+          </ul>
+        </div>
+        <div class="social_icons_section">
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
