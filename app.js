@@ -15,12 +15,12 @@ button.addEventListener("click", function (e) {
 });
 
 function getWeather(city) {
-  const latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=d6196ea5826327a1c37fc5fa26ccc5aa`;
+  const latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid={process.env.APP_ID}`;
   DisplayCity.textContent = city;
 
   fetch(latLonUrl).then((response) => {
     response.json().then((data) => {
-      const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${data[0].lat}&lon=${data[0].lon}&appid=d6196ea5826327a1c37fc5fa26ccc5aa`;
+      const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${data[0].lat}&lon=${data[0].lon}&appid={process.env.APP_ID}`;
       fetch(weatherURL).then((response) => {
         response.json().then((data) => {
           displayWeather(data);
